@@ -11,6 +11,7 @@ java fileAnalyzer 'path/to/file/1.ext, path/to/file/2.ext, ... , path/to/file/n.
 ## Implementation
 1. In FileStatsReader.java, using `Collections.synchronizedList` so that the results are collected in a thread safe manner.
 2. In FileStatsReader.java, created a thread pool using `java.util.concurrent.ExecutorService`, however the current thread will be locked until all threads spawned to collect the file stats are done. This code would need to be changed if that was not the desired behavior. 
+3. In FileStatsReader.java, a `newCachedThreadPool` is created instead of `newFixedThreadPool`, since getting the stats of the files should be very fast
 
 ## Sample output
 ```
