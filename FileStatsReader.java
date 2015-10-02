@@ -16,7 +16,7 @@ public class FileStatsReader {
         //Creating a synchronized list so that fileStatsResults can be mutated in a thread safe manner
         fileStatResults = Collections.synchronizedList(new ArrayList<>());
         threadPool = Executors.newCachedThreadPool();
-        exception = null;F
+        exception = null;
     }
 
     public void printStats(ArrayList<File> files, Runnable callback) {
