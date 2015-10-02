@@ -2,7 +2,7 @@
 A little command line tool to print out the file stats of a given list of file paths
 
 ## Usage
-Just run the following command in terminal after building.
+Just run the following command in terminal after building project as 'fileAnalyzer'.
 The only argument is a string that contains a comma delimited list of file paths
 ```
 java fileAnalyzer 'path/to/file/1.ext, path/to/file/2.ext, ... , path/to/file/n.ext'
